@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>Parseador de Isos</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	</head>
+	<body>
+		<div class="page-header">
+			<h1><a href="/">Parseador de Isos</a></h1>
+		</div>
+
+		<div class="content container">
+			<div class="form-group">
+				<form action="#" method="get">
+						<label for="iso">ISO:</label>
+						<input type="text" class="form-control" value="" name="isoTextBox"/>
+						<input type="submit" class="btn btn-success" value="Procesar" name="mybtn">
+				</form>
+			</div>
+		</div>		
+		<div class="content container">			
+			{% for x, y in posts %}
+				<div class="miEstilo">
+					{{ x }}<input type="text" class = "form-control" value ="{{ y }}"/>
+				</div>
+			{% endfor %}
+		</div>
+		<footer>
+			<div>
+				<span>© Copyright 2017 FN. All rights reserved</span>				
+			</div>
+		</footer>
+	</body>
+</html>
